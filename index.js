@@ -5,8 +5,18 @@ import mongoose from 'mongoose';
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send('Hello, World!');
+});
+
+app.post('/abc', (req, res) => {
+  const someText = req.body;
+  // do something with new text
+  res.json({
+    message: 'Successfully updated text',
+  });
 });
 
 const mongoConnect = async () => {
