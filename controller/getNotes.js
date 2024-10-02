@@ -3,8 +3,9 @@ import {getUserById, createNewNote} from "../services/notes.services.js"
 
 export const getUserNotes = async (req,res) =>{
   try{
-    const id = req.param.id;
-    const note = getUserById(id);
+    const id = req.params.id;
+    console.log(id)
+    const note = await getUserById(id);
     console.log(note);
     res.status(200).json({note});
   }catch(err){
