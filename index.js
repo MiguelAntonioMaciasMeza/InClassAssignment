@@ -9,9 +9,18 @@ const port = 3000;
 app.use(express.json())
 app.use("/note", noteRoute)
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+
+// app.get('/', (req, res) => {
+//   res.send('Hello, World!');
+// });
+
+// app.post('/abc', (req, res) => {
+//   const someText = req.body;
+//   // do something with new text
+//   res.json({
+//     message: 'Successfully updated text',
+//   });
+// });
 
 const mongoConnect = async () => {
   await mongoose.connect("mongodb://localhost:27017")
