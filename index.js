@@ -6,6 +6,7 @@ import noteRoute from './routes/note.route.js';
 const app = express();
 const port = 3000;
 
+app.use(express.json())
 app.use("/note", noteRoute)
 
 app.get('/', (req, res) => {

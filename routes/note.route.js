@@ -1,10 +1,10 @@
 import { Router } from "express"
-import { getUserNotes } from "../controller/getNotes.js"
+import { getUserNotes, postUserNote } from "../controller/getNotes.js"
 
 const noteRoute = Router()
 
-noteRoute.get("/get-note", getUserNotes)
-
+noteRoute.get("/get-note/:id", getUserNotes)
+noteRoute.post("/post-note", postUserNote)
 
 
 export default noteRoute
