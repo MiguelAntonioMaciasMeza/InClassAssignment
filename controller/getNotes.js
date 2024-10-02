@@ -1,6 +1,5 @@
-import {Router} from "express"
 import {getUserById} from "../services/notes.services.js"
-router = router();
+
 
 export const getUserNotes = async (req,res) =>{
   try{

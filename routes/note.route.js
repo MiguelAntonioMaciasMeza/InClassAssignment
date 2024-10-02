@@ -1,9 +1,9 @@
-import Router from "express"
-
+import { Router } from "express"
+import { getUserNotes } from "../controller/getNotes.js"
 
 const noteRoute = Router()
 
-noteRoute.get("/get-note/:id", getUserNoteData)
+noteRoute.get("/get-note", getUserNotes)
 
 
 
