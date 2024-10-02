@@ -1,0 +1,14 @@
+{
+  "name": "in-class-assignment",
+  "version": "1.0.0",
+  "description": "Classwork",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
