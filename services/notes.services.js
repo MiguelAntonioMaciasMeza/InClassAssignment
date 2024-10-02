@@ -10,4 +10,9 @@ export const createNewNote = async (userNote) => {
     await Note.create(userNote);
 }
 
+export const updateNoteById = async (id, updatedUserNote) => {
+    await Note.findOneAndUpdate(id, updatedUserNote)
+}
+
 export default getNoteById
+
