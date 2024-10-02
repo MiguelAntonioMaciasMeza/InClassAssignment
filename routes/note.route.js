@@ -1,10 +1,8 @@
-import { Router } from "express"
-import { getUserNotes } from "../controller/getNotes.js"
+import { Router } from "express";
+import { getUserNotes } from "../controller/getNotes.js";
 
-const noteRoute = Router()
+const noteRoute = Router();
 
-noteRoute.get("/get-note", getUserNotes)
+noteRoute.get("/get-note/:id", getUserNotes);
 
-
-
-export default noteRoute
+export default noteRoute;
