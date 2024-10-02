@@ -1,6 +1,6 @@
 import Note from "../model/notes.js"
 
-export const getUserById = async (id) => {
+export const getNoteById = async (id) => {
     const note = await Note.find({ id })
     return note
 }
@@ -14,4 +14,5 @@ export const updateNoteById = async (id, updatedUserNote) => {
     await Note.findOneAndUpdate(id, updatedUserNote)
 }
 
-export default getUserById
+export default getNoteById
+

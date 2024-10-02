@@ -1,16 +1,21 @@
-import {getUserById, createNewNote, updateNoteById} from "../services/notes.services.js"
+import {getNoteById, createNewNote, updateNoteById} from "../services/notes.services.js"
 
 
 export const getUserNotes = async (req,res) =>{
   try{
+
     const id = req.params.id;
     console.log(id)
-    const note = await getUserById(id);
+    if (!id) {
+     return res.status(400).json({ message: "ID parameter is required" });
+    }
+    const note = await getNoteById(id);
     console.log(note);
     res.status(200).json({note});
   }catch(err){
     console.log(err)
   }
+
 }
 
 export const postUserNote = async (req, res) => {
@@ -22,6 +27,7 @@ export const postUserNote = async (req, res) => {
   } catch(err) {
     console.log(err)
   }
+
 }
 
 export const updateUserNote = async (req, res) => {
@@ -33,4 +39,5 @@ export const updateUserNote = async (req, res) => {
   } catch(err) {
     console.log(err)
   }
+
 }
